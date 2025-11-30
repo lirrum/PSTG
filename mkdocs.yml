@@ -1,0 +1,28 @@
+site_name: Lirrum's Storage Tech Guide
+
+theme:
+  name: material
+  features:
+    - navigation.tabs       # 导航栏选项卡
+    - navigation.sections   # 导航栏分组
+    - navigation.expand     # 导航栏展开
+    - toc.integrate         # 目录集成到导航栏
+    - content.code.copy     # 代码块复制按钮
+    - content.tooltips      # 工具提示
+    
+  palette:
+    - scheme: default
+      primary: blue
+      accent: light-blue
+    
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+markdown_extensions:
+  - toc:
+      toc_depth: 6
+      permalink: true
+
+extra_css:                  # 自定义CSS
+  - stylesheets/extra.css
