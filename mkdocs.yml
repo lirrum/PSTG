@@ -23,6 +23,11 @@ markdown_extensions:
   - toc:
       toc_depth: 6
       permalink: true
+  - pymdownx.superfences
+  - lirrum_syntax
 
-extra_css:                  # 自定义CSS
-  - stylesheets/extra.css
+extra_css:
+  - stylesheets/extra.css?v=2
+  
+extra_javascript:
+  - javascripts/lirrum.js
