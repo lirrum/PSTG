@@ -138,11 +138,13 @@ h1 {
     text-underline-offset: 3px;
 }
 
-/* 文本加粗效果 */
-.md-typeset .lirrum-bold { font-weight: 900 !important; }
-
-/* 文本斜体效果 */
-.md-typeset .lirrum-italic { font-style: italic !important; }
+/* 删除线效果 */
+.md-typeset .lirrum-deleteline {
+    text-decoration-line: line-through;
+    text-decoration-color: #333; 
+    text-decoration-thickness: 1px;
+    text-decoration-style: solid;
+}
 
 /* 代码样式文本 */
 .md-typeset .lirrum-code {
