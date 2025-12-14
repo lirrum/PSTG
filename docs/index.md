@@ -1,4 +1,4 @@
-# LSTG简介
+# PSTG简介
 
 PSTG(Plain Storage Tech Guide)是由[Lirrum](https://space.bilibili.com/3546601557592878)编写的MC储电教材。
 
@@ -6,4 +6,5 @@ PSTG(Plain Storage Tech Guide)是由[Lirrum](https://space.bilibili.com/35466015
 
 ## 更新
 目前作者Lirrum正在读高三，退网期间不会更新主要内容，2026年高考后会将本书完成的，如有内容投稿请发送至邮箱1016367415@qq.com
+
 
