@@ -1,10 +1,10 @@
-/* 全局样式设置 */
+/* 全局h1样式：居中对齐 */
 h1 {
     text-align: center;
     width: 100%;
 }
 
-/* 段落样式：设置首行缩进、底部间距和行高 */
+/* 段落样式：首行缩进、底部间距和行高 */
 .md-typeset p {
     text-indent: 2em;
     margin-bottom: 1em;
@@ -25,43 +25,34 @@ h1 {
     text-indent: 0;
 }
 
-/* 剧透块基础样式：控制尺寸、布局和基础外观 */
+/* 遮盖块基础样式 */
 .md-typeset .lirrum-spoiler {
-    /* 尺寸控制：自适应文本宽度，不换行 */
     width: auto !important;
     min-width: 0 !important;
     max-width: none !important;
     white-space: nowrap !important;
-
-    /* 内外边距：最小化间距，避免多余空白 */
     padding: 0.1em 0.15em !important;
     margin: 0 0.05em !important;
-
-    /* 盒模型与布局：确保尺寸计算准确，垂直居中对齐 */
     box-sizing: border-box !important;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
     vertical-align: baseline !important;
     line-height: 1.2 !important;
-
-    /* 外观基础：深色背景，圆角边框，阴影效果 */
     background-color: #2c3e50 !important;
     color: transparent !important;
-    border-radius: 8px; /* 圆角处理：增大圆角值使边缘更圆润 */
+    border-radius: 8px;
     box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.5);
     cursor: pointer;
     user-select: none;
     position: relative;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-
-    /* 文本空白清除：确保无额外缩进或间距 */
     text-indent: 0 !important;
     letter-spacing: normal !important;
     word-spacing: normal !important;
 }
 
-/* 剧透块背景图案：使用网格图案覆盖背景 */
+/* 遮盖块背景网格图案 */
 .md-typeset .lirrum-spoiler::before {
     content: "" !important;
     position: absolute !important;
@@ -76,12 +67,12 @@ h1 {
         linear-gradient(-45deg, transparent 75%, #34495e 75%) !important;
     background-size: 10px 10px !important;
     background-position: 0 0 !important;
-    border-radius: 8px !important; /* 与剧透块保持一致的圆角 */
+    border-radius: 8px !important;
     z-index: 1 !important;
     pointer-events: none !important;
 }
 
-/* 剧透块提示文字：居中显示"???"提示 */
+/* 遮盖块提示文字('???') */
 .md-typeset .lirrum-spoiler::after {
     content: "???" !important;
     position: absolute !important;
@@ -102,7 +93,7 @@ h1 {
     margin: 0 !important;
 }
 
-/* 剧透块交互状态：悬停或显示时的样式变化 */
+/* 遮盖块悬停-显示状态样式 */
 .md-typeset .lirrum-spoiler:hover,
 .md-typeset .lirrum-spoiler.revealed {
     background-color: transparent !important;
@@ -112,7 +103,7 @@ h1 {
     padding: 0.1em 0.15em !important;
 }
 
-/* 交互状态下隐藏背景图案和提示文字 */
+/* 交互状态下隐藏背景和提示 */
 .md-typeset .lirrum-spoiler:hover::before,
 .md-typeset .lirrum-spoiler.revealed::before,
 .md-typeset .lirrum-spoiler:hover::after,
@@ -120,7 +111,7 @@ h1 {
     opacity: 0 !important;
 }
 
-/* 文本颜色类：定义多种预设文本颜色 */
+/* 文本颜色预设类 */
 .md-typeset .lirrum-red { color: #e74c3c !important; }
 .md-typeset .lirrum-blue { color: #3498db !important; }
 .md-typeset .lirrum-green { color: #2ecc71 !important; }
@@ -129,7 +120,7 @@ h1 {
 .md-typeset .lirrum-cyan { color: #1abc9c !important; }
 .md-typeset .lirrum-orange { color: #e67e22 !important; }
 
-/* 文本装饰类：高亮效果 */
+/* 文本高亮效果 */
 .md-typeset .lirrum-highlight {
     background: linear-gradient(120deg, #fdfd77a0 0%, #fdfd77a0 100%) !important;
     background-repeat: no-repeat !important;
@@ -139,7 +130,7 @@ h1 {
     border-radius: 2px;
 }
 
-/* 文本装饰类：波浪下划线 */
+/* 波浪下划线效果 */
 .md-typeset .lirrum-underline {
     text-decoration: underline !important;
     text-decoration-color: #3498db !important;
@@ -147,13 +138,13 @@ h1 {
     text-underline-offset: 3px;
 }
 
-/* 文本装饰类：加粗 */
+/* 文本加粗效果 */
 .md-typeset .lirrum-bold { font-weight: 900 !important; }
 
-/* 文本装饰类：斜体 */
+/* 文本斜体效果 */
 .md-typeset .lirrum-italic { font-style: italic !important; }
 
-/* 文本装饰类：代码样式 */
+/* 代码样式文本 */
 .md-typeset .lirrum-code {
     font-family: 'Courier New', Consolas, monospace !important;
     background-color: #f8f9fa !important;
@@ -164,3 +155,48 @@ h1 {
     border: 1px solid #eaecf0;
     font-size: 0.9em;
 }
+
+/* 导航栏核心调整：强制消除所有冗余空间 */
+.md-header {
+    min-height: 0 !important;
+    padding: 0 !important;
+}
+
+.md-header__inner {
+    padding: 0 !important;
+    min-height: 0 !important;
+}
+
+/* 标题区域压缩到最小 */
+.md-header__title {
+    margin: 0 !important;
+    padding: 0.2rem 0.5rem !important;
+    height: auto !important;
+    line-height: 1.2 !important;
+}
+
+/* 搜索框区域压缩 */
+.md-header__search {
+    margin: 0.2rem 0.5rem !important;
+    height: auto !important;
+}
+
+/* 导航栏按钮区域压缩 */
+.md-tabs__list {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-content: flex-start !important;
+    margin: 0 !important;
+    padding: 0 0.5rem !important;
+    line-height: 1 !important;
+    border-collapse: collapse !important;
+  }
+  
+/* 导航栏按钮样式 */
+.md-tabs__item {
+    margin: 0 !important;
+    padding: 0.1rem 0.4rem !important;
+    line-height: 1 !important;
+    height: auto !important;
+    vertical-align: top !important;
+  }
