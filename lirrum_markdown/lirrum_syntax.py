@@ -38,11 +38,12 @@ class LirrumSyntaxExtension(Extension):
             175
         )
         md.inlinePatterns.register(
-            LirrumSpoilerPattern(r'=([^=]+)='), 
+            LirrumSpoilerPattern(r'=(\S(?:[^=]*\S)?)='), 
             'lirrum_spoiler', 
             176
         )
 
 def makeExtension(**kwargs):
     """Markdown标准入口函数"""
+
     return LirrumSyntaxExtension(**kwargs)
